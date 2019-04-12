@@ -1,0 +1,76 @@
+@import "config"; //exw ola ta mix kai metablites sto config file
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background();
+  background: $primary-color;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 5rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; // gia na balw opacity sto background i me sass mporoume na baloume to lighten
+    background: rgba(lighten($primary-color, $amount: 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+    text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+  // to nesting edw pianei ta class=icons MONO pou briskontai mesa sti main
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut()
+          //kaloume to mixin(function) pou tou thesame to transition
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      // h1 of the element with id=home
+      margin-top: 20vh;
+    }
+  }
+}
