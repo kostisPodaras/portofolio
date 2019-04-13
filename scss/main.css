@@ -103,7 +103,7 @@
   background-position: 80%;
   background-size: cover;
   border-radius: 50%;
-  border: 3px solid #eece1a;
+  border: 2px solid #eece1a;
 }
 
 .menu .nav-item {
@@ -268,7 +268,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: 3px solid #eece1a;
+  border: 2px solid #eece1a;
 }
 
 .bio {
@@ -309,6 +309,12 @@ main#home h1 {
   background: #2b2b2b;
   color: white;
   height: 60px;
+}
+
+.about-skills {
+  color: #eece1a;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
