@@ -2,11 +2,10 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../dist/img/background.jpg);
-$background-opacity: 0.83;
+$background-opacity: 0.9;
 
-//something like a function
 @mixin easeOut {
-  transition: all 0.5s;
+  transition: all 0.5s ease-out;
 }
 
 @mixin background {
@@ -15,46 +14,50 @@ $background-opacity: 0.83;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-    }
 
-    //pseudo element for the background opacity
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba($primary-color, $background-opacity);
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
     }
   }
 }
 
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 
-//Media Query Mixins
-@mixin  mediaSm {
+// Media Query Mixins
+@mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
   }
 }
 
-
-@mixin  mediaMd {
-  @media screen and (max-width: 767px) {
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 
-
-@mixin  mediaLg {
-  @media screen and (min-width:769) and  (min-width: 1170px) {
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
     @content;
   }
 }
 
-
-@mixin  mediaXl {
+@mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
   }
