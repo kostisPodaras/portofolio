@@ -170,6 +170,9 @@
     line-height: 1;
     margin-bottom: 1rem;
   }
+  main h1.lg-heading {
+    font-size: 3rem;
+  }
   ul.menu-nav,
   div.menu-branding {
     float: none;
