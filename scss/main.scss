@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -188,5 +189,11 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+.about-skills{
+  color: $secondary-color;
+  text-align: center;
+}
+
 
 @import 'mobile';

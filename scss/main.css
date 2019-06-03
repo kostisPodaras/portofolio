@@ -162,6 +162,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -385,6 +386,11 @@ main#home h1 {
   background: #2b2b2b;
   color: #fff;
   height: 60px;
+}
+
+.about-skills {
+  color: #eece1a;
+  text-align: center;
 }
 
 @media screen and (min-width: 1171px) {
