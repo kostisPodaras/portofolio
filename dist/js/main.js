@@ -31,3 +31,15 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Make icons dissapear when menu is active
+var icons = false
+document.querySelector('.menu-btn').addEventListener('click', function(){
+  if(icons === false){
+    document.querySelector('.icons').style.display = 'none'
+    icons = true;
+  }else{
+    document.querySelector('.icons').style.display = 'block'
+    icons = false;
+  }
+})
